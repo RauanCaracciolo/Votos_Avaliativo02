@@ -5,15 +5,48 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".viewController.MainActivity">
 
     <TextView
+        android:id="@+id/tvBemVindo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Bem vindo!"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVotar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btnVotar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Participar da Pesquisa"
+        app:layout_constraintBottom_toTopOf="@+id/btnVerMeuVoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBemVindo"/>
+
+    <Button
+        android:id="@+id/btnVerMeuVoto"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Checar meu voto"
+        app:layout_constraintBottom_toTopOf="@+id/btnVerResultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVotar"/>
+
+    <Button
+        android:id="@+id/btnVerResultado"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Finalizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnVerMeuVoto"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
