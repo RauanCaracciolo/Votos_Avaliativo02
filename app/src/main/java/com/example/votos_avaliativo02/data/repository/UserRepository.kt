@@ -10,10 +10,10 @@ class UserRepository(context: Context) {
     private val dbHelper = MyDatabaseHelper(context)
     private val dao = UserDao(dbHelper)
 
-    fun insert(user: User): Long = dao.insertUser(user)
+    fun insert(user: User) = dao.insertUser(user)
 
     fun getAll(): List<User> = dao.getAll()
 
-    fun getByProntuario(prontuario: String): Boolean = dao.getByProntuario(prontuario)
+    fun getByProntuario(prontuario: String): User? = dao.getByProntuario(prontuario)
 
 }
