@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.votos_avaliativo02"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.votos_avaliativo02"
