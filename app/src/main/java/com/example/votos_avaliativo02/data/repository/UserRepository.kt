@@ -1,4 +1,19 @@
 package com.example.votos_avaliativo02.data.repository
 
-class UserRepository {
+import android.content.Context
+import com.example.votos_avaliativo02.data.database.MyDatabaseHelper
+import com.example.votos_avaliativo02.data.database.UserDao
+import com.example.votos_avaliativo02.data.model.User
+
+class UserRepository(context: Context) {
+
+    private val dbHelper = MyDatabaseHelper(context)
+    private val dao = UserDao(dbHelper)
+
+    fun insert(user: User): Long = dao.insertUser(user)
+
+    fun getAll(): List<User> = dao.getAll()
+
+    fun getByProntuario(prontuario: String): Boolean = dao.getByProntuario(prontuario)
+
 }
