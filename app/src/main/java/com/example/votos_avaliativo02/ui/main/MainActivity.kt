@@ -1,4 +1,4 @@
-package com.example.votos_avaliativo02.viewController
+package com.example.votos_avaliativo02.ui.main
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
