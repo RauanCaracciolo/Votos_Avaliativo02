@@ -12,11 +12,12 @@ class ResultActivity:AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        //Configura o layout
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         viewModel = ViewModelProvider(this).get(ResultViewModel::class.java)
 
     }
+
 }

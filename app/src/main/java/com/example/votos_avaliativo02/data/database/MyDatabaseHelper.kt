@@ -28,8 +28,11 @@ class MyDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_KE
         p0?.execSQL(createTableVote)
     }
 
-    override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
-        TODO("Not yet implemented")
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        db.execSQL("DROP TABLE IF EXISTS users")
+        db.execSQL("DROP TABLE IF EXISTS votos")
+
+        onCreate(db)
     }
 
 }

@@ -9,12 +9,15 @@ import com.example.votos_avaliativo02.ui.login.LoginActivity
 import com.example.votos_avaliativo02.ui.result.ResultActivity
 
 class MainActivity : AppCompatActivity() {
+
     lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //Configura o layout
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         configureListeners()
     }
     fun configureListeners(){
