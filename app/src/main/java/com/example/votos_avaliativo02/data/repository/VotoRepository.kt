@@ -15,7 +15,6 @@ class VotoRepository(context: Context) {
 
     fun getByCode(code: String): Voto? = dao.getByCode(code)
 
-
     fun getAll(): List<Voto> = dao.getAll()
 
 }

@@ -1,4 +1,4 @@
-package com.example.votos_avaliativo02.ui.main
+package com.example.votos_avaliativo02.ui.vote
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

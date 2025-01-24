@@ -2,13 +2,11 @@ package com.example.votos_avaliativo02.ui.main
 
 import android.content.Intent
 import android.os.Bundle
-import android.provider.Telephony.Mms.Intents
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.votos_avaliativo02.R
 import com.example.votos_avaliativo02.databinding.ActivityMainBinding
+import com.example.votos_avaliativo02.ui.check.CheckActivity
+import com.example.votos_avaliativo02.ui.login.LoginActivity
+import com.example.votos_avaliativo02.ui.result.ResultActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
