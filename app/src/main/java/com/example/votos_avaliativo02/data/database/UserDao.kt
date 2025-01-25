@@ -40,7 +40,7 @@ class UserDao(private val dbHelper: MyDatabaseHelper) {
         val cursor = db.query(
             "users",
             arrayOf("prontuario","nome"),
-            "codigo = ?",
+            "prontuario = ?",
             arrayOf(prontuario),
             null,
             null,

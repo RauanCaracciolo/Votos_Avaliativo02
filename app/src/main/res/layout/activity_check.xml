@@ -21,14 +21,14 @@
         android:layout_marginBottom="8dp"
         android:text="Codigo"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/etProntuario"
+        app:layout_constraintBottom_toTopOf="@+id/etCodigo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
 
     <EditText
-        android:id="@+id/etProntuario"
+        android:id="@+id/etCodigo"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -44,9 +44,22 @@
         android:id="@+id/btnEntrar"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Entrar"
-        app:layout_constraintTop_toBottomOf="@+id/etProntuario"
+        android:text="Checar"
+        app:layout_constraintTop_toBottomOf="@+id/etCodigo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrar"
+        app:layout_constraintVertical_bias="0.181" />
 </androidx.constraintlayout.widget.ConstraintLayout>

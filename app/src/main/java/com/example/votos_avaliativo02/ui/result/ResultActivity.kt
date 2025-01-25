@@ -17,7 +17,18 @@ class ResultActivity:AppCompatActivity() {
         setContentView(binding.root)
 
         viewModel = ViewModelProvider(this).get(ResultViewModel::class.java)
+        setResults()
+    }
 
+    private fun setResults() {
+        val ruim = viewModel.count(1)
+        val regular = viewModel.count(2)
+        val bom = viewModel.count(3)
+        val otimo = viewModel.count(4)
+        binding.tvResultado01.text = "Ruim: $ruim"
+        binding.tvResultado02.text = "Regular: $regular"
+        binding.tvResultado03.text = "Bom: $bom"
+        binding.tvResultado04.text = "Otimo: $otimo"
     }
 
 }
