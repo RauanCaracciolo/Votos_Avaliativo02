@@ -18,28 +18,11 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
         repository = UserRepository(application)
     }
 
-    // Função para efetuar o login ou registrar o usuário e logar
-    fun login(prontuario: String, nome: String): Boolean {
-
-        try {
-            if(checkExistence(prontuario)){
-                return false
-            }else{
-                if (nome.isNotEmpty()) {
-                    val newUser = User(prontuario, nome)
-                    repository.insert(newUser)
-                    _user.value = newUser
-
-                    return true
-                } else {
-                    return false
-                }
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-            return false
+    fun getNome(prontuario: String):String?{
+        if(checkExistence(prontuario)){
+            return repository.getByProntuario(prontuario)?.nome.toString()
         }
-
+        return null
     }
     fun checkExistence(prontuario: String):Boolean{
         return try {

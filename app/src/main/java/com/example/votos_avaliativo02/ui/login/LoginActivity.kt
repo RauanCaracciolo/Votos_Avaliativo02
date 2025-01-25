@@ -38,7 +38,8 @@ class LoginActivity:AppCompatActivity() {
                 mIntent.putExtra("nome", nm)
                 startActivity(mIntent)
             }else{
-                binding.tvResult.text = "Erro no login, esse prontuario ja votou!"
+                val nome = viewModel.getNome(prt)
+                binding.tvResult.text = "Erro no login, $nome você ja votou!"
             }
         }else{
             binding.tvResult.text = "Erro, preencha todos os dados!"
