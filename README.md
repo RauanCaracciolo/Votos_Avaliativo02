@@ -24,7 +24,7 @@ Para que o sistema funcione corretamente foram adicionadas algumas funções:
 
 - **Login (LoginActivity):** Esta página possui a opção de logar com os campos para inserir o prontuário e o nome, caso ainda não esteja registrado, o sistema automaticamente faz o registro do usuário junto com o seu login, mas caso já esteja registrado ele faz a conferência se o usuário já efetuou o voto para depois encaminhar. Caso já tenha votado ele gera uma mensagem avisando que o usuário já votou e se ainda não tiver votado ele encaminha para página de votação.
 
-- **Página de Voto (VoteActivity):** Esta página possui uma pergunta de pesquisa de opinião e as opções de voto abaixo ("Ruim", "Regular", "Bom" e "Ótimo"), após clicar no botão de votar ele computa o voto e gera um código (String) do voto, este código já é copiado automaticamente para área de transferência, para uma consulta posterior.
+- **Página de Voto (VoteActivity):** Esta página possui uma pergunta de pesquisa de opinião e as opções de voto abaixo ("Ruim", "Regular", "Bom" e "Ótimo"), após clicar no botão de votar ele computa o voto e gera um código (String) do voto, este código é exibido na tela e já é copiado automaticamente para área de transferência, para uma consulta posterior. **OBS: Após clicar em votar e exibir o código na tela, o sistema aguarda 2 segundos para encaminhar automaticamente para a página inicial.**
 
 - **Checar Voto (CheckActivity):** Esta opção encaminha para a página de checagem do voto, onde será necessário inserir o código gerado na votação e assim ele mostrará qual foi a opção de voto escolhida.
 
