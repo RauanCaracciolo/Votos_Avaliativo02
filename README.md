@@ -28,4 +28,4 @@ Para que o sistema funcione corretamente foram adicionadas algumas funções:
 
 - **Checar Voto (CheckActivity):** Esta opção encaminha para a página de checagem do voto, onde será necessário inserir o código gerado na votação e assim ele mostrará qual foi a opção de voto escolhida.
 
-- **Finalizar (ResultActivity)** Esta opção encaminha para a página onde serão exibidos o resultado da pesquisa de opinião com a quantidade de votos em cada opção, além da quantidade de participantes totais da pesquisa.
+- **Finalizar (ResultActivity):** Esta opção encaminha para a página onde serão exibidos o resultado da pesquisa de opinião com a quantidade de votos em cada opção, além da quantidade de participantes totais da pesquisa.
