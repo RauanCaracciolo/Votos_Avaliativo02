@@ -16,6 +16,18 @@
         android:textAlignment="center" />
 
     <TextView
+        android:id="@+id/tvResultadoTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total de Participantes: 0"
+        android:textSize="20sp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/tvResultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center" />
+
+    <TextView
         android:id="@+id/tvResultado01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,4 +75,5 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="32dp"
         android:textAlignment="center" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

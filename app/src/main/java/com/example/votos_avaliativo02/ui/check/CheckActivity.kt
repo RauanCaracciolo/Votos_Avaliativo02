@@ -31,21 +31,21 @@ class CheckActivity:AppCompatActivity() {
         if(voto != null){
             when(voto.valor){
                 1->{
-                    binding.tvResult.text = "Voce votou em Ruim"
+                    binding.tvResult.text = "Você votou em Ruim"
                }
                 2->{
-                    binding.tvResult.text = "Voce votou em Regular"
+                    binding.tvResult.text = "Você votou em Regular"
                 }
                 3->{
-                    binding.tvResult.text = "Voce votou em Bom"
+                    binding.tvResult.text = "Você votou em Bom"
                 }
                 4->{
-                    binding.tvResult.text = "Voce votou em Otimo"
+                    binding.tvResult.text = "Você votou em Ótimo"
                 }
 
             }
         }else{
-            binding.tvResult.text = "Erro, esse voto nao existe"
+            binding.tvResult.text = "Erro, esse voto não existe"
         }
     }
 

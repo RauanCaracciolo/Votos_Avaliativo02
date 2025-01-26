@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.votos_avaliativo02.R
-import com.example.votos_avaliativo02.databinding.ActivityMainBinding
 import com.example.votos_avaliativo02.databinding.ActivityVoteBinding
 import com.example.votos_avaliativo02.ui.main.MainActivity
 
@@ -35,38 +34,51 @@ class VoteActivity:AppCompatActivity() {
     private fun configListeners() {
         val ptr = intent.getStringExtra("prontuario")
         val nm = intent.getStringExtra("nome")
-        var escl:Int? = null
+        var escl: Int? = null
 
-        binding.btnVotar.setOnClickListener{
-            when(binding.radioGroup.checkedRadioButtonId){
-                R.id.rbRuim ->{
+        binding.btnVotar.setOnClickListener {
+            // Identificar a escolha do usuário
+            when (binding.radioGroup.checkedRadioButtonId) {
+                R.id.rbRuim -> {
                     escl = 1
                 }
-                R.id.rbRegular ->{
+                R.id.rbRegular -> {
                     escl = 2
                 }
-                R.id.rbBom->{
+                R.id.rbBom -> {
                     escl = 3
                 }
-                R.id.rbOtimo ->{
+                R.id.rbOtimo -> {
                     escl = 4
                 }
             }
-            Toast.makeText(this, escl.toString(), Toast.LENGTH_SHORT).show()
+
             if (ptr != null && nm != null && escl != null) {
                 viewModel.login(ptr, nm)
-                val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                 val rtn = viewModel.insertVoto(escl!!)
+
+                binding.tvResult.text = "Código gerado: $rtn"
+
+                val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                 val clip = ClipData.newPlainText("label", rtn)
                 clipboard.setPrimaryClip(clip)
-                Toast.makeText(this, "Codigo copiado para area de transferecia", Toast.LENGTH_SHORT).show()
-                val mIntent = Intent(this, MainActivity::class.java)
-                startActivity(mIntent)
-            }else{
-                binding.tvResult.text = "Erro, escolha uma opcao!"
+                Toast.makeText(this, "Código copiado para a área de transferência", Toast.LENGTH_SHORT).show()
+
+                // Adicione um atraso para o redirecionamento
+                binding.btnVotar.isEnabled = false
+
+                // Espera 2 segundos antes de redirecionar para a MainActivity
+                binding.btnVotar.postDelayed({
+                    val mIntent = Intent(this, MainActivity::class.java)
+                    startActivity(mIntent)
+                    finish()
+                }, 2000)
+
+            } else {
+                binding.tvResult.text = "Erro: escolha uma opção antes de votar!"
             }
+
         }
     }
-
 
 }

@@ -22,6 +22,7 @@ class ResultViewModel(application: Application) : AndroidViewModel(application) 
     fun getAll(): List<Voto> {
         return repository.getAll()
     }
+
     fun count(type:Int): Int{
         val lista = this.getAll()
         var count = 0
@@ -33,6 +34,12 @@ class ResultViewModel(application: Application) : AndroidViewModel(application) 
             i++
         }
         return count
+    }
+
+    // Função que retorn o total de participantes
+    fun getTotal(): Int {
+        val lista = this.getAll()
+        return lista.size
     }
 
 }

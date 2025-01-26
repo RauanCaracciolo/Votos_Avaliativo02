@@ -25,10 +25,15 @@ class ResultActivity:AppCompatActivity() {
         val regular = viewModel.count(2)
         val bom = viewModel.count(3)
         val otimo = viewModel.count(4)
+
+        val total = viewModel.getTotal()
+
         binding.tvResultado01.text = "Ruim: $ruim"
         binding.tvResultado02.text = "Regular: $regular"
         binding.tvResultado03.text = "Bom: $bom"
-        binding.tvResultado04.text = "Otimo: $otimo"
+        binding.tvResultado04.text = "Ótimo: $otimo"
+
+        binding.tvResultadoTotal.text = "Total de Participantes: $total"
     }
 
 }
